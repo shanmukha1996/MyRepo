@@ -1,6 +1,3 @@
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install -y python
-ADD helloworld.py /home/hello.py
-CMD ["/home/hello.py"]
-ENTRYPOINT ["python"]
+FROM python:3.8
+ADD helloworld.py /
+CMD ["python", "./helloworld.py"]
